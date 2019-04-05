@@ -3,8 +3,8 @@ language: scala
 jdk: oraclejdk8
 
 scala:
-- 2.10.4
 - 2.12.8
 
 script:
-- sbt ++$TRAVIS_SCALA_VERSION test
+- sbt ++$TRAVIS_SCALA_VERSION dist
+- sbt ++$TRAVIS_SCALA_VERSION docker:publishLocal
