@@ -4,7 +4,9 @@ case class User(userId: String, password: String)
 
 object User{
 
+  val validUsers = List(User("admin", "password"))
+
   def authenticate(userId: String, password: String): Boolean = {
-    "admin".equals(userId) && "password".equals(password)
+    validUsers.contains(User(userId, password))
   }
 }

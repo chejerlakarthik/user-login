@@ -7,6 +7,10 @@ import play.api.mvc._
 @Singleton
 class LoginController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
 
+  def ping = Action {
+    Ok("It works!!")
+  }
+
   def authenticate = Action { request : Request[AnyContent] =>
     val body: AnyContent = request.body
     val jsonBody = body.asJson
