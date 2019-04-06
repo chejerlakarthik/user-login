@@ -11,6 +11,9 @@ libraryDependencies += guice
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "4.0.1" % Test
 
 maintainer := "chejerlakarthik@gmail.com"
+
+herokuAppName in Compile := "limitless-lake-52612"
+
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "com.codebrains.controllers._"
 
