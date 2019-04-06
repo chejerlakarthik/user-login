@@ -8,3 +8,4 @@ scala:
 script:
 - sbt ++$TRAVIS_SCALA_VERSION dist
 - sbt ++$TRAVIS_SCALA_VERSION docker:publishLocal
+- sbt ++$TRAVIS_SCALA_VERSION stage deployHeroku
