@@ -8,4 +8,4 @@ scala:
 script:
 - sbt ++$TRAVIS_SCALA_VERSION dist
 - sbt ++$TRAVIS_SCALA_VERSION docker:publishLocal
-- sbt ++$TRAVIS_SCALA_VERSION stage deployHeroku
+- HEROKU_API_KEY="a9f12619-1568-4756-aa69-fbd1cf15688d" sbt ++$TRAVIS_SCALA_VERSION stage deployHeroku
